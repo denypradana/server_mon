@@ -139,6 +139,34 @@ void loop() {
           if (readString.indexOf("?device12down") > 0) {
             digitalWrite(pinLED12, LOW);
           }
+          if (readString.indexOf("?deviceallup") > 0) {
+            digitalWrite(pinLED1, HIGH);
+            digitalWrite(pinLED2, HIGH);
+            digitalWrite(pinLED3, HIGH);
+            digitalWrite(pinLED4, HIGH);
+            digitalWrite(pinLED5, HIGH);
+            digitalWrite(pinLED6, HIGH);
+            digitalWrite(pinLED7, HIGH);
+            digitalWrite(pinLED8, HIGH);
+            digitalWrite(pinLED9, HIGH);
+            digitalWrite(pinLED10, HIGH);
+            digitalWrite(pinLED11, HIGH);
+            digitalWrite(pinLED12, HIGH);
+          }
+          if (readString.indexOf("?devicealldown") > 0) {
+            digitalWrite(pinLED1, LOW);
+            digitalWrite(pinLED2, LOW);
+            digitalWrite(pinLED3, LOW);
+            digitalWrite(pinLED4, LOW);
+            digitalWrite(pinLED5, LOW);
+            digitalWrite(pinLED6, LOW);
+            digitalWrite(pinLED7, LOW);
+            digitalWrite(pinLED8, LOW);
+            digitalWrite(pinLED9, LOW);
+            digitalWrite(pinLED10, LOW);
+            digitalWrite(pinLED11, LOW);
+            digitalWrite(pinLED12, LOW);
+          }
 
           readString = "";
         }
