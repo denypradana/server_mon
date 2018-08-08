@@ -9,10 +9,6 @@ int pinLED5 = 6;
 int pinLED6 = 7;
 int pinLED7 = 8;
 int pinLED8 = 9;
-int pinLED9 = 10;
-int pinLED10 = 11;
-int pinLED11 = 12;
-int pinLED12 = 13;
 
 int pos = 0;
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };   
@@ -41,10 +37,7 @@ void setup() {
   pinMode(pinLED6,OUTPUT);
   pinMode(pinLED7,OUTPUT);
   pinMode(pinLED8,OUTPUT);
-  pinMode(pinLED9,OUTPUT);
-  pinMode(pinLED10,OUTPUT);
-  pinMode(pinLED11,OUTPUT);
-  pinMode(pinLED12,OUTPUT);
+  
 }
 
 void loop() {
@@ -115,30 +108,6 @@ void loop() {
           if (readString.indexOf("?device8down") > 0) {
             digitalWrite(pinLED8, LOW);
           }
-          if (readString.indexOf("?device9up") > 0) {
-            digitalWrite(pinLED9, HIGH);
-          }
-          if (readString.indexOf("?device9down") > 0) {
-            digitalWrite(pinLED9, LOW);
-          }
-          if (readString.indexOf("?device10up") > 0) {
-            digitalWrite(pinLED10, HIGH);
-          }
-          if (readString.indexOf("?device10down") > 0) {
-            digitalWrite(pinLED10, LOW);
-          }
-          if (readString.indexOf("?device11up") > 0) {
-            digitalWrite(pinLED11, HIGH);
-          }
-          if (readString.indexOf("?device11down") > 0) {
-            digitalWrite(pinLED11, LOW);
-          }
-          if (readString.indexOf("?device12up") > 0) {
-            digitalWrite(pinLED12, HIGH);
-          }
-          if (readString.indexOf("?device12down") > 0) {
-            digitalWrite(pinLED12, LOW);
-          }
           if (readString.indexOf("?deviceallup") > 0) {
             digitalWrite(pinLED1, HIGH);
             digitalWrite(pinLED2, HIGH);
@@ -148,10 +117,7 @@ void loop() {
             digitalWrite(pinLED6, HIGH);
             digitalWrite(pinLED7, HIGH);
             digitalWrite(pinLED8, HIGH);
-            digitalWrite(pinLED9, HIGH);
-            digitalWrite(pinLED10, HIGH);
-            digitalWrite(pinLED11, HIGH);
-            digitalWrite(pinLED12, HIGH);
+            
           }
           if (readString.indexOf("?devicealldown") > 0) {
             digitalWrite(pinLED1, LOW);
@@ -162,10 +128,7 @@ void loop() {
             digitalWrite(pinLED6, LOW);
             digitalWrite(pinLED7, LOW);
             digitalWrite(pinLED8, LOW);
-            digitalWrite(pinLED9, LOW);
-            digitalWrite(pinLED10, LOW);
-            digitalWrite(pinLED11, LOW);
-            digitalWrite(pinLED12, LOW);
+            
           }
 
           readString = "";
