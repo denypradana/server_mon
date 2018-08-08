@@ -26,7 +26,7 @@ void setup() {
   // Start Server
   Ethernet.begin(mac, ip, gateway, subnet);
   server.begin();
-  Serial.print("server is at ");
+  Serial.print("Server ip address : ");
   Serial.println(Ethernet.localIP());
 
   pinMode(pinLED1,OUTPUT);
