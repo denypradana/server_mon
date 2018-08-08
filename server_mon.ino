@@ -7,6 +7,13 @@ int pinLED3 = 4;
 int pinLED4 = 5;
 int pinLED5 = 6;
 int pinLED6 = 7;
+int pinLED7 = 8;
+int pinLED8 = 9;
+int pinLED9 = 10;
+int pinLED10 = 11;
+int pinLED11 = 12;
+int pinLED12 = 13;
+
 int pos = 0;
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };   
 byte ip[] = { 192, 168, 2, 200 };                    
@@ -32,6 +39,12 @@ void setup() {
   pinMode(pinLED4,OUTPUT);
   pinMode(pinLED5,OUTPUT);
   pinMode(pinLED6,OUTPUT);
+  pinMode(pinLED7,OUTPUT);
+  pinMode(pinLED8,OUTPUT);
+  pinMode(pinLED9,OUTPUT);
+  pinMode(pinLED10,OUTPUT);
+  pinMode(pinLED11,OUTPUT);
+  pinMode(pinLED12,OUTPUT);
 }
 
 void loop() {
@@ -89,6 +102,42 @@ void loop() {
           }
           if (readString.indexOf("?device6down") > 0) {
             digitalWrite(pinLED6, LOW);
+          }
+          if (readString.indexOf("?device7up") > 0) {
+            digitalWrite(pinLED7, HIGH);
+          }
+          if (readString.indexOf("?device7down") > 0) {
+            digitalWrite(pinLED7, LOW);
+          }
+          if (readString.indexOf("?device8up") > 0) {
+            digitalWrite(pinLED8, HIGH);
+          }
+          if (readString.indexOf("?device8down") > 0) {
+            digitalWrite(pinLED8, LOW);
+          }
+          if (readString.indexOf("?device9up") > 0) {
+            digitalWrite(pinLED9, HIGH);
+          }
+          if (readString.indexOf("?device9down") > 0) {
+            digitalWrite(pinLED9, LOW);
+          }
+          if (readString.indexOf("?device10up") > 0) {
+            digitalWrite(pinLED10, HIGH);
+          }
+          if (readString.indexOf("?device10down") > 0) {
+            digitalWrite(pinLED10, LOW);
+          }
+          if (readString.indexOf("?device11up") > 0) {
+            digitalWrite(pinLED11, HIGH);
+          }
+          if (readString.indexOf("?device11down") > 0) {
+            digitalWrite(pinLED11, LOW);
+          }
+          if (readString.indexOf("?device12up") > 0) {
+            digitalWrite(pinLED12, HIGH);
+          }
+          if (readString.indexOf("?device12down") > 0) {
+            digitalWrite(pinLED12, LOW);
           }
 
           readString = "";
