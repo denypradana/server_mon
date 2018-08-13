@@ -63,6 +63,7 @@ void loop() {
           client.stop();
           /* 
             Kontrol digital output arduino
+            Note : untuk relay active LOW bernilai 1, sedangkan active HIGH bernilai 0
             Membaca URL input untuk kemudian diteruskan ke perintah
           */
           if (readString.indexOf("?device1up") > 0) {
