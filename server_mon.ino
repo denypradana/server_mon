@@ -58,6 +58,26 @@ void loop() {
 
 
         if (c == '\n') {
+          client.println("HTTP/1.1 200 OK");
+          client.println("Content-Type: text/html");
+          client.println("Connection: close");
+          client.println();
+          client.println("<HTMl>");
+          client.println("<HEAD>");
+          client.println("<meta name='apple-mobile-web-app-capable' content='yes' />");
+          client.println("<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />");
+          client.println("<meta http-equiv='refresh' content='10' >");
+          client.println("<TITLE>DEVICE MONITORING</TITLE>");
+          client.println("</HEAD>");
+          client.println("<BODY>");
+          client.println("<H1>Device Status</H1>");
+          client.println("<hr />");
+          client.println("<br />");
+          client.println("<H2>STATUS</H2>");
+          client.println("<br />");
+          client.println(outStatus);
+          client.println("</BODY>");
+          client.println("</HTMl>");
           delay(1);
           // Menghentikan client  
           client.stop();
@@ -151,28 +171,6 @@ void loop() {
             digitalWrite(pinOUT7, LOW);
             digitalWrite(pinOUT8, LOW);
             outStatus="DEVALL_OFF";
-          }
-          if (readString.indexOf("?devicestatus") > 0) {
-            client.println("HTTP/1.1 200 OK");
-            client.println("Content-Type: text/html");
-            client.println("Connection: close");
-            client.println();
-            client.println("<HTMl>");
-            client.println("<HEAD>");
-            client.println("<meta name='apple-mobile-web-app-capable' content='yes' />");
-            client.println("<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />");
-            client.println("<meta http-equiv='refresh' content='10' >");
-            client.println("<TITLE>DEVICE MONITORING</TITLE>");
-            client.println("</HEAD>");
-            client.println("<BODY>");
-            client.println("<H1>Device Status</H1>");
-            client.println("<hr />");
-            client.println("<br />");
-            client.println("<H2>STATUS</H2>");
-            client.println("<br />");
-            client.println(outStatus);
-            client.println("</BODY>");
-            client.println("</HTMl>");
           }
 
           readString = "";
