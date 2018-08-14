@@ -12,8 +12,8 @@ int pinOUT8 = 9;
 
 int pos = 0;
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };   
-byte ip[] = { 192, 168, 2, 200 };                    
-byte gateway[] = { 192, 168, 2, 1 };                 
+byte ip[] = { 192, 168, 100, 200 };                    
+byte gateway[] = { 192, 168, 100, 1 };                 
 byte subnet[] = { 255, 255, 255, 0 };                  
 EthernetServer server(8888);                           
 String readString;
